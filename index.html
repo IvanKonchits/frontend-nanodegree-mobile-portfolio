@@ -71,9 +71,9 @@
         </footer>
         <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <script src="http://www.google-analytics.com/analytics.js"></script>
-        <script async src="js/perfmatters.js"></script>
         <script>
             (function(a,b){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].a=1*new Date})(window,"ga");ga("create","UA-XXXX-Y");ga("send","pageview");
+            function logCRP(){var t=window.performance.timing,dcl=t.domContentLoadedEventStart-t.domLoading,complete=t.domComplete-t.domLoading;var stats=document.getElementById("crp-stats");stats.textContent='DCL: '+dcl+'ms, onload: '+complete+'ms'}window.addEventListener("load",function(event){logCRP()});
         </script> 
     </div>
 </body>
